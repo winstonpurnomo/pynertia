@@ -1,0 +1,24 @@
+{% load django_vite %}
+<!DOCTYPE html>
+<html lang="en">
+    <script type="module">
+        import RefreshRuntime from "http://127.0.0.1:56001/static/@react-refresh"
+        RefreshRuntime.injectIntoGlobalHook(window)
+        window.$RefreshReg$ = () => {}
+        window.$RefreshSig$ = () => (type) => type
+        window.__vite_plugin_react_preamble_installed__ = true
+    </script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                 <!-- vite hmr -->
+        {% vite_hmr_client %}
+        {% vite_asset 'entrypoints/main.tsx' %}
+        {% vite_asset 'entrypoints/style.css' %}
+        <title>Django Inertia Starter Kit</title>
+    </head>
+    <body>      
+        <!-- inertia -->
+        {% block inertia %}{% endblock %}
+    </body>
+</html>

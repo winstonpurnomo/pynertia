@@ -12,6 +12,8 @@ This React starter kit utilizes React 19, TypeScript, Tailwind and shadcn/ui, ba
 - ruff for Python linting
 - ty for Python type checking
 
+It includes a basic landing page, a signin/signup page, and a dashboard page. It does NOT implement proper authentication.
+
 ## Getting Started
 
 You can get started by having the preferred tooling installed:
